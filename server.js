@@ -2,7 +2,7 @@ const express = require('express')
 
 const app = express()
 
-app.get('/api/sections', (req, res) => {
+app.get('/sections', (req, res) => {
     const sections = [
         {title: 'About'},
         {title: 'Work Experience'},

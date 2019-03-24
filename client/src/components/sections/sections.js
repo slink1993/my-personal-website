@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import './sections.css';
+import SectionItem from './SectionItem.js';
+import './Sections.css';
 
 class Sections extends Component {
   constructor() {
@@ -10,17 +11,16 @@ class Sections extends Component {
   }
 
   componentDidMount() {
-      fetch('/api/sections')
+      fetch('/sections')
        .then(res => res.json())
        .then(sections => this.setState({sections}, () => console.log('Sections fetched..', sections)));
   }
   render() {
     return (
       <div >
-       <h2>Sections</h2>
        <ul>
            {this.state.sections.map(section => 
-             <li> {section.title} </li>
+             <SectionItem key= {section.title} section={section} />
              )}
        </ul>
       </div>

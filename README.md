@@ -1,2 +1,2 @@
 # my-personal-website
-Created with React, NodeJS, and to be hosted on GCP
+Created with React, NodeJS, Express and to be hosted on GCP
