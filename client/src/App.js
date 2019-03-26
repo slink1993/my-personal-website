@@ -1,24 +1,42 @@
 import React, { Component } from 'react';
-import './App.css';
-import Header from './components/layout/Header';
-import Sections from './components/sections/Sections';
 import About from './components/pages/About'
+import Hobbies from './components/pages/Hobbies'
+import Skills from './components/pages/Skills'
+import WorkExperience from './components/pages/WorkExperience'
+import { Link } from 'react-router-dom';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { Layout, Header, Navigation, Drawer, Content } from 'react-mdl';
+import Landing from './components/pages/Landing';
+import './App.css'
+import Main from './components/Main'
 
 class App extends Component {
   render() {
     return (
-      <Router>
       <div className="App">
-        <Header/>
-        <Route exact path ="/" render={props => (
-          <React.Fragment>
-            <Sections/>
-          </React.Fragment>
-        )} />
-        <Route path ="/about" component={About} />
+          <Layout>
+            <Header className="header-color" title="Stephen Link" scroll>
+                <Navigation>
+                  <Link to="/about">About</Link>
+                  <Link to="/skills">Skills</Link>
+                  <Link to="/workexperience">Work Experience</Link>
+                  <Link to="/hobbies">Hobbies</Link>
+                </Navigation>
+            </Header>
+            <Drawer title="Title">
+              <Navigation>
+                  <Link to="/about">About</Link>
+                  <Link to="/skills">Skills</Link>
+                  <Link to="/workexperience">Work Experience</Link>
+                  <Link to="/hobbies">Hobbies</Link>
+              </Navigation>
+            </Drawer>
+            <Content>
+                <div className="page-content" />
+                <Main/>
+            </Content>
+          </Layout>
       </div>
-      </Router>
     );
   }
 }

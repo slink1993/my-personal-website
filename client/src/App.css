@@ -1,15 +1,61 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+.header-color {
+  background: #ee0979;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #ff6a00, #ee0979);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #ff6a00, #ee0979); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.4;
+.landing-grid {
+  background: #ee0979;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #ff6a00, #ee0979);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #ff6a00, #ee0979); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
-a {
-  color: #333;
-  text-decoration: none;
+.profile-pic {
+  height: 250px;
+  padding-top: 5em;
+}
+
+.banner-text {
+  background-color: black;
+  opacity: .8;
+  width: 40%;
+  margin: auto;
+  border-radius: 10px;
+}
+
+.banner-text h1 {
+  font-size: 66px;
+  font-weight: bold;
+  color: white;
+}
+
+.banner-text hr {
+  border-top: 5px dotted white;
+  width: 50%;
+  margin: auto;
+}
+
+.banner-text p {
+  color: white;
+  font-size: 20px;
+  padding: 1em;
+}
+
+.social-links {
+  display: flex;
+  justify-content: space-evenly;
+  width: 50%;
+  margin: auto;
+}
+
+.social-links i {
+  color: white;
+  font-size: 5em;
+  padding: 8px;
 }

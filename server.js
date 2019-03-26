@@ -3,15 +3,12 @@ const express = require('express')
 const app = express()
 
 app.get('/sections', (req, res) => {
-    const sections = [
-        {title: 'About'},
-        {title: 'Work Experience'},
-        {title: 'Skills'},
-        {title: 'Hobbies'}
-    ];
+    sections = []
 
     res.json(sections);
 });
+
+app.use(express.static('images'))
 
 const port = 5000;
 
